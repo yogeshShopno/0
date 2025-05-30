@@ -22,10 +22,10 @@ export default function Home() {
 
   const fetchSchool = async () => {
     const formData = new FormData()
-    formData.append('type', `${subdomain}.icbapp`)
+    formData.append('type', `${subdomain}`)
 
     try {
-      const response = await fetch('/api/school', {
+      const response = await fetch('https://masteradmin.icbapp.site/api/', {
         method: 'POST',
         body: formData
       })
